@@ -12,10 +12,10 @@ const SignupSection = () => {
             <CardHeader className="flex flex-col items-center space-y-0">
               <img
                 src="/images/logo.svg"
-                alt="logo"
-                width={94}
-                height={18}
-                className="mb-7 dark:invert"
+                alt="Maestro"
+                width={97}
+                height={15}
+                className="mb-7 h-[15px] w-auto dark:invert"
               />
               <p className="mb-2 text-2xl font-bold">Start your free trial</p>
               <p className="text-muted-foreground">
@@ -43,12 +43,6 @@ const SignupSection = () => {
                   <FcGoogle className="mr-2 size-5" />
                   Sign up with Google
                 </Button>
-              </div>
-              <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
-                <p>Already have an account?</p>
-                <a href="/login" className="text-primary font-medium">
-                  Log in
-                </a>
               </div>
             </CardContent>
           </Card>

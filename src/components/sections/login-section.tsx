@@ -13,10 +13,10 @@ const LoginSection = () => {
             <CardHeader className="flex flex-col items-center space-y-0">
               <img
                 src="/images/logo.svg"
-                alt="logo"
-                width={94}
-                height={18}
-                className="mb-7 dark:invert"
+                alt="Maestro"
+                width={97}
+                height={15}
+                className="mb-7 h-[15px] w-auto dark:invert"
               />
               <p className="mb-2 text-2xl font-bold">Welcome back</p>
               <p className="text-muted-foreground">

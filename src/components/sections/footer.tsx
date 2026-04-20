@@ -29,12 +29,11 @@ const Footer = () => {
           <a href="/" className="flex items-center gap-1">
             <img
               src="/images/logo.svg"
-              alt="logo"
-              width={30}
-              height={30}
-              className="dark:invert"
+              alt="Maestro"
+              width={116}
+              height={18}
+              className="h-[18px] w-auto dark:invert"
             />
-            <span className="leading-0 text-2xl font-semibold">Relative</span>
           </a>
         </div>
         <div className="flex flex-1 justify-between gap-8 max-sm:flex-col">

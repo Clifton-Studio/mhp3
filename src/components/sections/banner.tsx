@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-const Banner = ({ url = 'https://shadcnblocks.com' }: { url?: string }) => {
+const Banner = ({ url = 'https://maestro.dev/' }: { url?: string }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isClient, setIsClient] = useState(false);
 
@@ -34,8 +34,8 @@ const Banner = ({ url = 'https://shadcnblocks.com' }: { url?: string }) => {
       <div className="container flex items-center justify-between gap-4 py-3 pr-12">
         <div className="flex flex-1 items-center justify-center gap-3 sm:gap-4">
           <span className="text-sm font-medium text-center text-primary-foreground">
-            Purchase this theme on{' '}
-            <span className="font-semibold">shadcnblocks.com</span>
+            Learn more about{' '}
+            <span className="font-semibold">Maestro</span>
           </span>
           <Button
             size="sm"
@@ -47,7 +47,7 @@ const Banner = ({ url = 'https://shadcnblocks.com' }: { url?: string }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get Template
+              Visit Maestro
             </a>
           </Button>
         </div>

@@ -63,12 +63,11 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
           <a href="/" className="flex items-center gap-1">
             <img
               src="/images/logo.svg"
-              alt="logo"
-              width={30}
-              height={30}
-              className="dark:invert"
+              alt="Maestro"
+              width={116}
+              height={18}
+              className="h-[18px] w-auto dark:invert"
             />
-            <span className="leading-0 text-2xl font-semibold">Relative</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -129,20 +128,11 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
             >
               <ThemeToggle />
             </div>
-            <a href="/login" className="hidden lg:block">
-              <Button variant="outline" className="gap-1">
-                Login
-                <ChevronRight className="size-4" />
-              </Button>
-            </a>
             <a
-              href="/signup"
+              href="/download"
               className={`transition-opacity duration-300 ${isMenuOpen ? "pointer-events-none opacity-0" : "opacity-100"}`}
             >
-              <Button className="gap-1">
-                Sign up
-                <ChevronRight className="size-4" />
-              </Button>
+              <Button>Download</Button>
             </a>
 
             {/* Hamburger Menu Button (Mobile Only) */}
@@ -178,26 +168,7 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
             : "invisible translate-x-full opacity-0"
         }`}
       >
-        <div className="mt-8 space-y-2">
-          <a
-            href="/signup"
-            className="block"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <Button size="sm" className="w-full">
-              Sign up
-            </Button>
-          </a>
-          <a
-            href="/login"
-            className="block"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <Button size="sm" className="w-full" variant="outline">
-              Login
-            </Button>
-          </a>
-        </div>
+        <div className="mt-8" />
         <nav className="mt-3 flex flex-1 flex-col gap-6">
           {navLinks.map((link) =>
             link.dropdownItems ? (
