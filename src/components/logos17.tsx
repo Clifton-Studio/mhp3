@@ -18,63 +18,72 @@ interface Logos17Props {
   className?: string;
 }
 
+const brandfetchToken = "1idjMwySZlfLUyQ7x24";
+
+const brandfetchLogo = (domain: string) =>
+  `https://cdn.brandfetch.io/${domain}/w/300/logo?c=${brandfetchToken}`;
+
+const maestroCompanies: Company[] = [
+  { name: "Microsoft", logo: brandfetchLogo("microsoft.com"), href: "https://microsoft.com" },
+  { name: "Meta", logo: brandfetchLogo("meta.com"), href: "https://meta.com" },
+  { name: "DoorDash", logo: brandfetchLogo("doordash.com"), href: "https://doordash.com" },
+  { name: "Uber", logo: brandfetchLogo("uber.com"), href: "https://uber.com" },
+  { name: "xAI", logo: brandfetchLogo("x.ai"), href: "https://x.ai" },
+  { name: "Amazon", logo: brandfetchLogo("amazon.com"), href: "https://amazon.com" },
+  { name: "Disney", logo: brandfetchLogo("disney.com"), href: "https://disney.com" },
+  { name: "Stripe", logo: brandfetchLogo("stripe.com"), href: "https://stripe.com" },
+  { name: "Kraken", logo: brandfetchLogo("kraken.com"), href: "https://kraken.com" },
+  { name: "Block", logo: brandfetchLogo("block.xyz"), href: "https://block.xyz" },
+  { name: "Deel", logo: brandfetchLogo("deel.com"), href: "https://deel.com" },
+  { name: "DuckDuckGo", logo: brandfetchLogo("duckduckgo.com"), href: "https://duckduckgo.com" },
+  { name: "Brex", logo: brandfetchLogo("brex.com"), href: "https://brex.com" },
+  { name: "Flipkart", logo: brandfetchLogo("flipkart.com"), href: "https://flipkart.com" },
+  { name: "KFC", logo: brandfetchLogo("kfc.com"), href: "https://kfc.com" },
+  { name: "IKEA", logo: brandfetchLogo("ikea.com"), href: "https://ikea.com" },
+  { name: "Atlassian", logo: brandfetchLogo("atlassian.com"), href: "https://atlassian.com" },
+  { name: "Pinterest", logo: brandfetchLogo("pinterest.com"), href: "https://pinterest.com" },
+  { name: "Bluesky", logo: brandfetchLogo("bsky.app"), href: "https://bsky.app" },
+  { name: "Sentry", logo: brandfetchLogo("sentry.io"), href: "https://sentry.io" },
+  { name: "Komoot", logo: brandfetchLogo("komoot.com"), href: "https://komoot.com" },
+  { name: "Phantom", logo: brandfetchLogo("phantom.com"), href: "https://phantom.com" },
+  {
+    name: "Flightradar24",
+    logo: brandfetchLogo("flightradar24.com"),
+    href: "https://flightradar24.com",
+  },
+  { name: "GoodRx", logo: brandfetchLogo("goodrx.com"), href: "https://goodrx.com" },
+  { name: "Yum! Brands", logo: brandfetchLogo("yum.com"), href: "https://yum.com" },
+  {
+    name: "Holland & Barrett",
+    logo: brandfetchLogo("hollandandbarrett.com"),
+    href: "https://hollandandbarrett.com",
+  },
+  { name: "Skyscanner", logo: brandfetchLogo("skyscanner.com"), href: "https://skyscanner.com" },
+  {
+    name: "Blockchain.com",
+    logo: brandfetchLogo("blockchain.com"),
+    href: "https://blockchain.com",
+  },
+];
+
 const Logos17 = ({
   heading = "Trusted by the world's best teams",
   subheading,
-  topRowCompanies = [
-    {
-      name: "Mercury",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/mercury.svg",
-      href: "#",
-    },
-    {
-      name: "Watershed",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/watershed.svg",
-      href: "#",
-    },
-    {
-      name: "Retool",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/retool.svg",
-      href: "#",
-    },
-    {
-      name: "Descript",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/descript.svg",
-      href: "#",
-    },
-  ],
-  bottomRowCompanies = [
-    {
-      name: "Perplexity",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/perplexity.svg",
-      href: "#",
-    },
-    {
-      name: "Monzo",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/monzo.svg",
-      href: "#",
-    },
-    {
-      name: "Ramp",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/ramp.svg",
-      href: "#",
-    },
-    {
-      name: "Raycast",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/raycast.svg",
-      href: "#",
-    },
-    {
-      name: "Arc",
-      logo: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/arc.svg",
-      href: "#",
-    },
-  ],
+  topRowCompanies = maestroCompanies.slice(0, 14),
+  bottomRowCompanies = maestroCompanies.slice(14),
   className,
 }: Logos17Props) => {
+  const desktopRows = [
+    maestroCompanies.slice(0, 6),
+    maestroCompanies.slice(6, 12),
+    maestroCompanies.slice(12, 18),
+    maestroCompanies.slice(18, 23),
+    maestroCompanies.slice(23),
+  ];
+
   return (
-    <section className={cn("overflow-hidden", className)}>
-      <div className="container space-y-10 lg:space-y-16">
+    <section className={cn("overflow-hidden py-6 md:py-8 lg:py-10", className)}>
+      <div className="container space-y-8 lg:space-y-12">
         <div className="text-center">
           <h2 className="font-ui-mono mb-4 font-normal uppercase leading-[1.5] tracking-[0.06em] text-balance">
             <span className="md:hidden">Trusted by</span>
@@ -88,16 +97,15 @@ const Logos17 = ({
           </h2>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-8">
-          {/* Top row - 4 logos */}
-          <LogoRow companies={topRowCompanies} gridClassName="grid-cols-4" />
+        <div className="hidden w-full flex-col items-center gap-6 md:flex">
+          {desktopRows.map((companies, index) => (
+            <LogoRow companies={companies} key={index} />
+          ))}
+        </div>
 
-          {/* Bottom row - 5 logos */}
-          <LogoRow
-            companies={bottomRowCompanies}
-            gridClassName="grid-cols-5"
-            direction="right"
-          />
+        <div className="flex w-full flex-col items-center gap-8 md:hidden">
+          <LogoMarquee companies={topRowCompanies} />
+          <LogoMarquee companies={bottomRowCompanies} direction="right" />
         </div>
       </div>
     </section>
@@ -106,53 +114,55 @@ const Logos17 = ({
 
 interface LogoRowProps {
   companies: Company[];
-  gridClassName: string;
+}
+
+const LogoRow = ({ companies }: LogoRowProps) => {
+  return (
+    <div className="flex w-full items-center justify-center gap-x-8 lg:gap-x-10">
+      {companies.map((company, index) => (
+        <a
+          href={company.href || "#"}
+          target="_blank"
+          rel="noreferrer"
+          key={index}
+        >
+          <img
+            src={company.logo}
+            alt={`${company.name} logo`}
+            className="h-8 max-w-36 object-contain opacity-55 transition-opacity hover:opacity-80"
+          />
+        </a>
+      ))}
+    </div>
+  );
+};
+
+interface LogoMarqueeProps {
+  companies: Company[];
   direction?: "left" | "right";
 }
 
-const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
+const LogoMarquee = ({ companies, direction }: LogoMarqueeProps) => {
   return (
-    <>
-      {/* Desktop static version */}
-      <div className="hidden md:block">
-        <div
-          className={cn(
-            "grid items-center justify-items-center gap-x-20 lg:gap-x-28",
-            gridClassName,
-          )}
-        >
-          {companies.map((company, index) => (
-            <a href={company.href || "#"} target="_blank" key={index}>
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                className="h-8 w-auto object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* Mobile marquee version */}
-      <div className="md:hidden">
-        <Marquee direction={direction} pauseOnHover>
-          {companies.map((company, index) => (
-            <a
-              href={company.href || "#"}
-              target="_blank"
-              key={index}
-              className="mx-8 inline-block transition-opacity hover:opacity-70"
-            >
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                className="h-8 w-auto object-contain"
-              />
-            </a>
-          ))}
-        </Marquee>
-      </div>
-    </>
+    <div className="w-full">
+      <Marquee direction={direction} pauseOnHover>
+        {companies.map((company, index) => (
+          <a
+            href={company.href || "#"}
+            target="_blank"
+            rel="noreferrer"
+            key={index}
+            className="mx-6 inline-block transition-opacity hover:opacity-70"
+          >
+            <img
+              src={company.logo}
+              alt={`${company.name} logo`}
+              className="h-6 w-auto object-contain"
+            />
+          </a>
+        ))}
+      </Marquee>
+    </div>
   );
 };
 
