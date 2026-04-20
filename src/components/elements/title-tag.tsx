@@ -12,7 +12,7 @@ const TitleTag = ({
   return (
     <Badge
       variant="outline"
-      className="bg-card w-fit gap-1 px-3 text-sm font-normal tracking-tight shadow-sm"
+      className="bg-card w-fit gap-1 px-3 text-sm font-normal tracking-[0.06em] shadow-sm"
     >
       <Icon className="size-4" />
       <span>{title}</span>

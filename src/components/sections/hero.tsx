@@ -20,7 +20,7 @@ const downloadOptions = [
 export default function Hero() {
   return (
     <section className="text-center">
-      <div className="container mx-auto pb-8 pt-16 text-center md:pb-12 md:pt-20 lg:pt-28">
+      <div className="container mx-auto pb-10 pt-16 text-center md:pb-14 md:pt-20 lg:pb-16 lg:pt-28">
         <h1 className="mx-auto max-w-[500px] text-balance text-[2.5rem] leading-[1.2] tracking-[-1.6px] md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
           <span className="block whitespace-nowrap">Go ahead.</span>
           <span className="block whitespace-nowrap">Code at 150mph.</span>

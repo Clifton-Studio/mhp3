@@ -76,8 +76,9 @@ const Logos17 = ({
     <section className={cn("overflow-hidden", className)}>
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
-          <h2 className="mb-4 font-normal leading-[1.5] tracking-[-0.32px] text-balance">
-            {heading}
+          <h2 className="font-ui-mono mb-4 font-normal uppercase leading-[1.5] tracking-[0.06em] text-balance">
+            <span className="md:hidden">Trusted by</span>
+            <span className="max-md:hidden">{heading}</span>
             {subheading ? (
               <>
                 <br className="max-md:hidden" />
