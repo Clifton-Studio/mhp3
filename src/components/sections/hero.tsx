@@ -1,8 +1,21 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import DiagonalPattern from "../elements/diagonal-pattern";
+
+const downloadOptions = [
+  { label: "Studio desktop app - Mac", href: "/download#studio-mac" },
+  { label: "Studio desktop app - Windows", href: "/download#studio-windows" },
+  { label: "Studio desktop app - Linux", href: "/download#studio-linux" },
+  { label: "Maestro CLI", href: "/download#cli" },
+];
 
 export default function Hero() {
   return (
@@ -13,18 +26,36 @@ export default function Hero() {
         </BorderedSection>
         <div className="container mx-auto pb-12 pt-16 text-center md:pt-20 lg:pt-28">
           <h1 className="mx-auto max-w-[500px] text-balance text-[2.5rem] leading-[1.2] tracking-[-1.6px] md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
-            Say Goodbye to Task Overload
+            <span className="block whitespace-nowrap">Go ahead.</span>
+            <span className="block whitespace-nowrap">Code at 150mph.</span>
           </h1>
           <p className="text-muted-foreground mx-auto mt-5 max-w-[500px] leading-[1.5] tracking-[-0.32px] md:mt-6">
-            Prioritize, automate, and stay ahead—AI simplifies your tasks so you
-            can focus on what matters most.
+            Maestro is mobile UI testing at agentic velocity. Open source,
+            human-readable code, easy CI integrations, and powerful CLI and
+            desktop apps.
           </p>
-          <Button asChild className="mt-6 gap-1 md:mt-8 lg:mt-10">
-            <a href="/dashboard">
-              Get started
-              <ChevronRight className="size-4" />
-            </a>
-          </Button>
+          <div className="mt-6 inline-flex rounded-md shadow-sm md:mt-8 lg:mt-10">
+            <Button asChild className="rounded-r-none">
+              <a href="/download">Download</a>
+            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  aria-label="Choose download option"
+                  className="rounded-l-none border-l border-primary-foreground/20 px-3"
+                >
+                  <ChevronDown className="size-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="min-w-56">
+                {downloadOptions.map((option) => (
+                  <DropdownMenuItem key={option.href} asChild>
+                    <a href={option.href}>{option.label}</a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
         <BorderedSection className="border-l border-r-0 2xl:flex-1">
           <DiagonalPattern />

@@ -14,7 +14,7 @@ import Faq from '@/components/sections/faq';
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <Hero />
+  <Hero client:load />
   <Partners />
   <Features client:only='react' />
   <Adaptive />
