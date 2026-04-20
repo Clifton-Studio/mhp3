@@ -61,6 +61,13 @@ export default function Hero() {
           <DiagonalPattern />
         </BorderedSection>
       </div>
+    </section>
+  );
+}
+
+export function HeroMedia() {
+  return (
+    <section className="pb-16 text-center lg:pb-0">
       <div className="flex h-8 gap-1 max-lg:hidden">
         <div className="flex-1 border" />
         <DiagonalPattern className="w-52" />
