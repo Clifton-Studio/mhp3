@@ -56,6 +56,15 @@ export default function Hero() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+          <div className="mx-auto mt-10 max-w-[1000px] overflow-hidden rounded-2xl border p-1 shadow-lg md:mt-12 lg:mt-16">
+            <img
+              src="/images/homepage/dummy-screenshot.png"
+              alt="Maestro running a mobile UI test"
+              className="h-auto w-full rounded-xl object-contain"
+              width={1671}
+              height={1202}
+            />
+          </div>
         </div>
         <BorderedSection className="border-l border-r-0 2xl:flex-1">
           <DiagonalPattern />
