@@ -1,14 +1,14 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Relative - Modern Astro Template";
+export const SITE_TITLE = "Maestro - Mobile UI Testing For Humans + AIs";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "Mobile UI testing for humans and AIs. Write reliable tests in minutes, then scale them with Maestro.";
 
 export const SITE_METADATA = {
   title: {
     default: SITE_TITLE,
-    template: "%s | Relative",
+    template: "%s | Maestro",
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -21,34 +21,28 @@ export const SITE_METADATA = {
     "Shadcn/UI",
     "Web Development",
   ],
-  authors: [{ name: "Relative Team" }],
-  creator: "Relative Team",
-  publisher: "relative",
+  authors: [{ name: "Maestro" }],
+  creator: "Maestro",
+  publisher: "Maestro",
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: [
-      { url: "/favicon/favicon.ico", sizes: "48x48" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon.ico" },
-    ],
+    icon: [{ url: "/favicon/favicon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon/favicon.ico" }],
+    shortcut: [{ url: "/favicon/favicon.svg" }],
   },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    siteName: "charter",
+    siteName: "Maestro",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "charter - Modern Astro Template",
+        alt: "Maestro - Mobile UI Testing For Humans + AIs",
       },
     ],
   },
@@ -57,6 +51,6 @@ export const SITE_METADATA = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
-    creator: "@shadcnblockscom",
+    creator: "@maestro__dev",
   },
 };

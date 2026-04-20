@@ -52,11 +52,11 @@ export default function Hero() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div className="mx-auto mt-10 max-w-[1000px] overflow-hidden rounded-2xl border p-1 shadow-lg md:mt-12 lg:mt-16">
+        <div className="mx-auto mt-10 max-w-[1000px] overflow-hidden rounded-[24px] border p-1 shadow-lg md:mt-12 md:rounded-[40px] lg:mt-16">
           <img
             src="/images/homepage/dummy-screenshot.png"
             alt="Maestro running a mobile UI test"
-            className="h-auto w-full rounded-xl object-contain"
+            className="h-auto w-full rounded-[20px] object-contain md:rounded-[36px]"
             width={1671}
             height={1202}
           />
