@@ -1,0 +1,1 @@
+import{c as o}from"./createLucideIcon.w6hZbkeP.js";import{r as t}from"./index.Q9NhVK5J.js";const n=[["path",{d:"m9 18 6-6-6-6",key:"mthhwq"}]],s=o("ChevronRight",n);function i(r){const e=t.useRef({value:r,previous:r});return t.useMemo(()=>(e.current.value!==r&&(e.current.previous=e.current.value,e.current.value=r),e.current.previous),[r])}export{s as C,i as u};
