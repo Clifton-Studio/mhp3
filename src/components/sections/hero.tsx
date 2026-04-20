@@ -19,56 +19,48 @@ const downloadOptions = [
 
 export default function Hero() {
   return (
-    <section className="pb-16 text-center lg:pb-0">
-      <div className="flex">
-        <BorderedSection className="2xl:flex-1">
-          <DiagonalPattern />
-        </BorderedSection>
-        <div className="container mx-auto pb-12 pt-16 text-center md:pt-20 lg:pt-28">
-          <h1 className="mx-auto max-w-[500px] text-balance text-[2.5rem] leading-[1.2] tracking-[-1.6px] md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
-            <span className="block whitespace-nowrap">Go ahead.</span>
-            <span className="block whitespace-nowrap">Code at 150mph.</span>
-          </h1>
-          <p className="text-muted-foreground mx-auto mt-5 max-w-[500px] leading-[1.5] tracking-[-0.32px] md:mt-6">
-            Maestro is mobile UI testing at agentic velocity. Open source,
-            human-readable code, easy CI integrations, and powerful CLI and
-            desktop apps.
-          </p>
-          <div className="mt-6 inline-flex rounded-md shadow-sm md:mt-8 lg:mt-10">
-            <Button asChild className="rounded-r-none">
-              <a href="/download">Download</a>
-            </Button>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  aria-label="Choose download option"
-                  className="rounded-l-none border-l border-primary-foreground/20 px-3"
-                >
-                  <ChevronDown className="size-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-56">
-                {downloadOptions.map((option) => (
-                  <DropdownMenuItem key={option.href} asChild>
-                    <a href={option.href}>{option.label}</a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-          <div className="mx-auto mt-10 max-w-[1000px] overflow-hidden rounded-2xl border p-1 shadow-lg md:mt-12 lg:mt-16">
-            <img
-              src="/images/homepage/dummy-screenshot.png"
-              alt="Maestro running a mobile UI test"
-              className="h-auto w-full rounded-xl object-contain"
-              width={1671}
-              height={1202}
-            />
-          </div>
+    <section className="text-center">
+      <div className="container mx-auto pb-8 pt-16 text-center md:pb-12 md:pt-20 lg:pt-28">
+        <h1 className="mx-auto max-w-[500px] text-balance text-[2.5rem] leading-[1.2] tracking-[-1.6px] md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
+          <span className="block whitespace-nowrap">Go ahead.</span>
+          <span className="block whitespace-nowrap">Code at 150mph.</span>
+        </h1>
+        <p className="text-muted-foreground mx-auto mt-5 max-w-[500px] leading-[1.5] tracking-[-0.32px] md:mt-6">
+          Maestro is mobile UI testing at agentic velocity. Open source,
+          human-readable code, easy CI integrations, and powerful CLI and
+          desktop apps.
+        </p>
+        <div className="mt-6 inline-flex rounded-md shadow-sm md:mt-8 lg:mt-10">
+          <Button asChild className="rounded-r-none">
+            <a href="/download">Download</a>
+          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                aria-label="Choose download option"
+                className="rounded-l-none border-l border-primary-foreground/20 px-3"
+              >
+                <ChevronDown className="size-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-56">
+              {downloadOptions.map((option) => (
+                <DropdownMenuItem key={option.href} asChild>
+                  <a href={option.href}>{option.label}</a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
-        <BorderedSection className="border-l border-r-0 2xl:flex-1">
-          <DiagonalPattern />
-        </BorderedSection>
+        <div className="mx-auto mt-10 max-w-[1000px] overflow-hidden rounded-2xl border p-1 shadow-lg md:mt-12 lg:mt-16">
+          <img
+            src="/images/homepage/dummy-screenshot.png"
+            alt="Maestro running a mobile UI test"
+            className="h-auto w-full rounded-xl object-contain"
+            width={1671}
+            height={1202}
+          />
+        </div>
       </div>
     </section>
   );

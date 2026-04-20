@@ -73,7 +73,7 @@ const Logos17 = ({
   className,
 }: Logos17Props) => {
   return (
-    <section className={cn("overflow-hidden pb-28 lg:pb-32", className)}>
+    <section className={cn("overflow-hidden", className)}>
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
           <h2 className="mb-4 font-normal leading-[1.5] tracking-[-0.32px] text-balance">

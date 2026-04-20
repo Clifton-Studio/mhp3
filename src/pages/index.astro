@@ -3,7 +3,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import Testimonials from '@/components/sections/testimonials';
-import Hero, { HeroMedia } from '@/components/sections/hero';
+import Hero from '@/components/sections/hero';
 import { Logos17 } from '@/components/logos17';
 import Features from '@/components/sections/features';
 import Adaptive from '@/components/sections/adaptive';
@@ -16,7 +16,6 @@ import Faq from '@/components/sections/faq';
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <Hero client:load />
   <Logos17 client:only='react' />
-  <HeroMedia />
   <Features client:only='react' />
   <Adaptive />
   <Optimize client:only='react'/>
