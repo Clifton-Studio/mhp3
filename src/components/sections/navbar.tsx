@@ -130,7 +130,7 @@ const Navbar = ({ currentPage = "/" }: { currentPage: string }) => {
             </div>
             <a
               href="/download"
-              className={`transition-opacity duration-300 ${isMenuOpen ? "pointer-events-none opacity-0" : "opacity-100"}`}
+              className={`hidden transition-opacity duration-300 md:block ${isMenuOpen ? "pointer-events-none opacity-0" : "opacity-100"}`}
             >
               <Button>Download</Button>
             </a>

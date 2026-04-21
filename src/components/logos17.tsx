@@ -82,7 +82,12 @@ const Logos17 = ({
   ];
 
   return (
-    <section className={cn("overflow-hidden py-6 md:py-8 lg:py-10", className)}>
+    <section
+      className={cn(
+        "overflow-hidden pb-18 pt-6 md:pb-20 md:pt-8 lg:pb-30 lg:pt-10",
+        className,
+      )}
+    >
       <div className="container space-y-8 lg:space-y-12">
         <div className="text-center">
           <h2 className="font-ui-mono mb-4 font-normal uppercase leading-[1.5] tracking-[0.06em] text-balance">
