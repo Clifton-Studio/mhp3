@@ -1,27 +1,44 @@
+import { Badge } from "@/components/ui/badge";
+
 const DATA = [
   {
-    subTitle: "Unified Scheduling",
-    title: "Unified Scheduling",
+    subTitle: "AI",
+    title: "Power up your favorite agent",
     description:
-      "Keep all your appointments and events in sync with seamless cross-platform calendar connectivity.",
+      'Turn your coding agent into a mobile expert with our official Skill, MCP server, and Claude Plugin. Give agents the "eyes and hands" to build and verify E2E coverage locally, ensuring every change is fully tested before you ever open a PR.',
     icon: "CircleHelp",
-    image: "/images/homepage/adaptive-1.png",
+    image: {
+      light: "/images/homepage/adaptive-agent-light.png",
+      dark: "/images/homepage/adaptive-agent-dark.png",
+      width: 1000,
+      height: 602,
+    },
   },
   {
-    subTitle: "Insightful Performance",
-    title: "Insightful Performance",
+    subTitle: "Desktop",
+    title: "Build tests in Maestro Studio",
     description:
-      "Get clear, real-time analytics tracking your progress, key milestones, focus hours, and completed tasks.",
+      'A visual IDE for Mac and Windows that makes manual test creation feel like magic. Contextual autocomplete, "tap-tap-tap" YAML generation, deep selector inspection, and an embedded emulator to fix broken flows or validate agent-generated coverage in seconds.',
     icon: "Volume2",
-    image: "/images/homepage/adaptive-2.png",
+    image: {
+      light: "/images/homepage/adaptive-studio-light.png",
+      dark: "/images/homepage/adaptive-studio-dark.png",
+      width: 1740,
+      height: 1050,
+    },
   },
   {
-    subTitle: "Effortless Tool Integrations",
-    title: "Effortless Tool Integrations",
+    subTitle: "Command Line",
+    title: "Use the Maestro CLI",
     description:
-      "Link your favorite apps and services to streamline work without switching between platforms.",
+      "The lightweight, open-source engine for developers who prefer to bring their own IDE. Use the CLI to run human-readable YAML tests with the fastest, most dependable runner in mobile - whether you're iterating locally or executing at scale in CI.",
     icon: "Lightbulb",
-    image: "/images/homepage/adaptive-3.png",
+    image: {
+      light: "/images/homepage/adaptive-cli-light.png",
+      dark: "/images/homepage/adaptive-cli-dark.png",
+      width: 1112,
+      height: 658,
+    },
   },
 ];
 const AdaptiveList = () => {
@@ -33,9 +50,14 @@ const AdaptiveList = () => {
             key={index}
             className={`relative isolate pt-5 text-start lg:pt-20`}
           >
-            <span className="px-1 tracking-[-0.32px] lg:px-8">
-              {item.subTitle}
-            </span>
+            <div className="px-1 lg:px-8">
+              <Badge
+                variant="default"
+                className="w-fit border-transparent bg-foreground px-1 py-0.5 text-xs font-bold leading-none tracking-[0.06em] text-background shadow-none hover:bg-foreground"
+              >
+                {item.subTitle}
+              </Badge>
+            </div>
             <h3 className={`mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8`}>
               {item.title}
             </h3>
@@ -44,11 +66,11 @@ const AdaptiveList = () => {
             </p>
             <div className="border-t py-4 lg:px-2">
               <img
-                src={item.image}
+                src={item.image.dark}
                 alt={item.title}
-                width={416}
-                height={233}
-                className="rounded-md shadow-md lg:rounded-xl lg:shadow-lg dark:invert"
+                width={item.image.width}
+                height={item.image.height}
+                className="h-auto w-full rounded-md shadow-md lg:rounded-xl lg:shadow-lg"
               />
             </div>
           </div>
