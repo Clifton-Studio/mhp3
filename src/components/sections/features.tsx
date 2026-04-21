@@ -22,7 +22,7 @@ const Features = () => {
         <FeaturesList />
       </div>
 
-      <div className="h-8 w-full border-y md:h-12 lg:h-[112px]">
+      <div className="h-8 w-full border-b md:h-12 lg:h-[112px]">
         <div className="container h-full w-full border-x"></div>
       </div>
     </section>
