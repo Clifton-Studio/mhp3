@@ -129,7 +129,7 @@ const LogoRow = ({ companies }: LogoRowProps) => {
           <img
             src={company.logo}
             alt={`${company.name} logo`}
-            className="h-8 max-w-36 object-contain opacity-55 transition-opacity hover:opacity-80"
+            className="h-8 max-w-36 object-contain"
           />
         </a>
       ))}
