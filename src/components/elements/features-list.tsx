@@ -6,25 +6,40 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const FEATURES_DATA = [
   {
-    title: "Smart Task Management",
+    title: "Agentic test management",
     description:
-      "Create, prioritize, and delegate tasks effortlessly. AI helps you identify what matters most with smart recommendations and automated workflows.",
+      "Unblock high-velocity development by powering up your local agents or activating fully autonomous agents to manage test coverage upon every PR. Ensure your 100s of PRs are doing what they should, well.",
     icon: SquarePen,
-    image: "/images/homepage/features-1.png",
+    image: {
+      light: "/images/homepage/feature-agentic-test-management-light.png",
+      dark: "/images/homepage/feature-agentic-test-management-dark.png",
+      width: 626,
+      height: 800,
+    },
   },
   {
-    title: "Automated Scheduling",
+    title: "Deterministic test execution",
     description:
-      "Let AI find the best time slots for meetings, reminders, and tasks based on your calendar and working habits. Stay organized without the hassle.",
+      "Maestro flows are defined in human-readable YAML files so you and your agents always track to ground truth, not a black box. Have complete confidence with concrete, auditable tests.",
     icon: CalendarClock,
-    image: "/images/homepage/features-2.png",
+    image: {
+      light: "/images/homepage/feature-deterministic-test-execution-light.png",
+      dark: "/images/homepage/feature-deterministic-test-execution-dark.png",
+      width: 800,
+      height: 1020,
+    },
   },
   {
-    title: "Personalized Insights",
+    title: "Reliable, open-source framework",
     description:
-      "Track your productivity with AI-powered insights. Get weekly summaries and actionable tips to improve your workflow and manage workloads better.",
+      "Trusted by thousands of top-tier teams, Maestro is a super-efficient, transparent platform for your QA. Build on a trustworthy foundation dedicated to the agentic future. Extend it yourself if you like.",
     icon: ChartBar,
-    image: "/images/homepage/features-3.png",
+    image: {
+      light: "/images/homepage/feature-reliable-open-source-framework-light.png",
+      dark: "/images/homepage/feature-reliable-open-source-framework-dark.png",
+      width: 800,
+      height: 1020,
+    },
   },
 ];
 
@@ -54,7 +69,7 @@ const FeaturesList = () => {
         ))}
       </TabsList>
 
-      <div className="flex-1">
+      <div className="hidden flex-1 lg:block">
         {FEATURES_DATA.map((item, index) => (
           <TabsContent
             key={index}
@@ -68,13 +83,22 @@ const FeaturesList = () => {
                 </div>
                 <div className="relative grid grid-cols-[auto_1fr_auto] items-stretch">
                   <DiagonalPattern className="h-full w-6 lg:w-10" />
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    width={400}
-                    height={510}
-                    className="m-3 rounded-md object-contain shadow-md lg:rounded-xl lg:shadow-lg dark:invert"
-                  />
+                  <div className="m-3">
+                    <img
+                      src={item.image.light}
+                      alt={item.title}
+                      width={item.image.width}
+                      height={item.image.height}
+                      className="rounded-md object-contain shadow-md lg:rounded-xl lg:shadow-lg dark:hidden"
+                    />
+                    <img
+                      src={item.image.dark}
+                      alt={item.title}
+                      width={item.image.width}
+                      height={item.image.height}
+                      className="hidden rounded-md object-contain shadow-md lg:rounded-xl lg:shadow-lg dark:block"
+                    />
+                  </div>
                   <DiagonalPattern className="w-6 lg:w-10" />
                 </div>
                 <div className="px-6 lg:px-10">

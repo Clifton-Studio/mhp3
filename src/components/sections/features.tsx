@@ -10,10 +10,10 @@ const Features = () => {
       <div className="border-t">
         <SectionHeader
           iconTitle="Features"
-          title="Smart productivity with AI"
+          title="Battle-tested. AI-native."
           icon={PocketKnife}
           description={
-            "Unlock smarter productivity with features that help you manage tasks, time, and focus—seamlessly."
+            "Robust, open-source, time-tested - and now fully primed for human+AI development."
           }
         />
       </div>
