@@ -57,7 +57,7 @@ const TIMELINE_ITEMS = [
 const Accelerate = () => {
   return (
     <section id="accelerate-planning" className="">
-      <div className="border-b">
+      <div>
         <SectionHeader
           iconTitle="Accelerate"
           title="Accelerate your planning journey"

@@ -7,7 +7,7 @@ import FeaturesList from "../elements/features-list";
 const Features = () => {
   return (
     <section id="smart-productivity" className="pt-12 lg:pt-20">
-      <div className="border-y">
+      <div className="border-t">
         <SectionHeader
           iconTitle="Features"
           title="Smart productivity with AI"

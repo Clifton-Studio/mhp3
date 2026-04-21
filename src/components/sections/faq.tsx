@@ -86,7 +86,7 @@ const Faq = ({ withBorders = true }: { withBorders?: boolean }) => {
         </div>
       </div>
       {withBorders && (
-        <div className="h-8 w-full border-y md:h-12 lg:h-[112px]">
+        <div className="h-8 w-full md:h-12 lg:h-[112px]">
           <div className="container h-full w-full border-x"></div>
         </div>
       )}

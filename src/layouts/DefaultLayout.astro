@@ -1,6 +1,5 @@
 ---
 import BaseHead from '@/components/BaseHead.astro';
-import DiagonalPattern from '@/components/elements/diagonal-pattern';
 import Footer from '@/components/sections/footer';
 import Navbar from '@/components/sections/navbar';
 
@@ -15,16 +14,12 @@ const { title, description } = Astro.props;
     >
         <Navbar currentPage={Astro.url.pathname} client:only='react' />
         <div class="flex flex-1">
-            <aside class="relative w-[159px] border-r p-1 max-lg:hidden">
-                <DiagonalPattern />
-            </aside>
+            <aside class="relative w-[159px] border-r bg-muted max-lg:hidden"></aside>
             <div class="flex min-w-0 flex-1 flex-col">
                 <main class="flex-1"><slot /></main>
                 <Footer />
             </div>
-            <aside class="relative w-[159px] border-l p-1 max-lg:hidden">
-                <DiagonalPattern />
-            </aside>
+            <aside class="relative w-[159px] border-l bg-muted max-lg:hidden"></aside>
         </div>
     </body>
 </html>

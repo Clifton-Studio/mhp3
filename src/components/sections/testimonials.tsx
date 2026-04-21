@@ -101,7 +101,7 @@ const testimonials: TestimonialProps[] = [
 const Testimonials = ({ withBorders = true }: { withBorders?: boolean }) => {
   return (
     <section className="">
-      <div className={withBorders ? "border-b" : ""}>
+      <div>
         <SectionHeader
           iconTitle="lovin' it"
           title="What industry experts are saying"
@@ -118,7 +118,7 @@ const Testimonials = ({ withBorders = true }: { withBorders?: boolean }) => {
       </div>
 
       {withBorders && (
-        <div className="mt-12 h-8 w-full border-y md:h-12 lg:h-[112px]">
+        <div className="mt-12 h-8 w-full md:h-12 lg:h-[112px]">
           <div className="container h-full w-full border-x"></div>
         </div>
       )}

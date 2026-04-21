@@ -39,9 +39,6 @@ const OptimizeList = () => {
             value={item.title}
             className="group relative isolate inline-block h-full w-full whitespace-normal rounded-none px-1 py-5 text-start data-[state=active]:shadow-none max-lg:border-x last:max-lg:!border-b lg:border-b lg:px-8"
           >
-            <div
-              className={`absolute bottom-[-1px] left-0 h-[1px] w-0 bg-gradient-to-r from-blue-600 via-sky-300 to-transparent transition-all duration-300 group-data-[state=active]:w-1/2`}
-            />
             <Accessory className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2" />
             <Accessory className="absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2" />
             {index === OPTIMIZE_DATA.length - 1 && (

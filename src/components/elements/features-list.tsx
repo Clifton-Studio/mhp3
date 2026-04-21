@@ -41,9 +41,6 @@ const FeaturesList = () => {
             value={item.title}
             className="group relative whitespace-normal border-b px-1 py-5 text-start data-[state=active]:shadow-none lg:px-8"
           >
-            <div
-              className={`absolute bottom-[-1px] left-0 z-10 h-[1px] w-0 bg-gradient-to-r from-blue-600 via-sky-300 to-transparent transition-all duration-300 group-data-[state=active]:w-1/2`}
-            />
             <div className="">
               <div className="flex items-center gap-1.5">
                 <item.icon className="size-4" />

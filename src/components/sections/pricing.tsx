@@ -199,7 +199,7 @@ const Pricing = ({ withBorders = true }: { withBorders?: boolean }) => {
 
   return (
     <section className="">
-      <div className={withBorders ? "border-b" : ""}>
+      <div>
         <SectionHeader
           className={
             withBorders ? "" : "border-none lg:items-center lg:text-center"
